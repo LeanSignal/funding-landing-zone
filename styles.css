@@ -673,20 +673,63 @@ h3 {
     padding: 44px 28px;
   }
 
+  .section-block:not(.hero),
+  .value-section,
+  .principles-section {
+    width: min(100% - 32px, 1144px);
+  }
+
+  .section-panel {
+    padding: 44px 32px;
+  }
+
+  .chart-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .cost-chart-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .principles-grid,
+  .timeline,
+  .feature-grid,
+  .cta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .team-grid {
+    gap: 32px;
+  }
 }
 
 @media (max-width: 760px) {
   .site-shell {
-    padding: 16px 12px 48px;
+    padding: 12px 8px 40px;
   }
 
   .section-block {
-    padding: 44px 28px;
+    padding: 36px 22px;
+  }
+
+  .section-block:not(.hero),
+  .value-section,
+  .principles-section {
+    width: min(100% - 16px, 1144px);
+  }
+
+  .section-panel {
+    padding: 36px 22px;
   }
 
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
+    padding-top: 72px;
+    padding-bottom: 56px;
   }
 
   .hero-image {
@@ -697,8 +740,16 @@ h3 {
   .split-grid,
   .feature-grid,
   .cta-grid,
-  .comparison-grid {
+  .comparison-grid,
+  .principles-grid,
+  .timeline {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .divider {
@@ -712,26 +763,54 @@ h3 {
     font-size: 16px;
   }
 
+  .site-shell {
+    padding: 8px 6px 32px;
+  }
+
   .section-block {
-    padding: 36px 20px;
+    padding: 28px 16px;
+  }
+
+  .section-block:not(.hero),
+  .value-section,
+  .principles-section {
+    width: min(100% - 8px, 1144px);
+  }
+
+  .section-panel {
+    padding: 28px 16px;
   }
 
   .hero {
-    padding-top: 46px;
-    padding-bottom: 46px;
+    padding: 48px 18px 40px;
+    background-position: center;
+  }
+
+  .hero-copy {
+    gap: 16px;
   }
 
   h1 {
-    font-size: 42px;
+    font-size: clamp(26px, 7.6vw, 32px);
+    line-height: 1.18;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: clamp(22px, 6.4vw, 28px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 15px;
   }
 
   .hero p,
   .lead {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .text-panel,
@@ -739,12 +818,55 @@ h3 {
   .era-card,
   .team-card,
   .cta-card {
-    padding: 22px;
+    padding: 18px;
   }
 
-  .era-card,
+  .core-panel {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .feature-card,
+  .cta-card {
+    min-height: 0;
+  }
+
+  .era-card {
+    padding: 0;
+  }
+
+  .era-card > div {
+    padding: 0 8px;
+  }
+
+  .era-number {
+    height: 48px;
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
   .team-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .team-card h3 {
+    font-size: 16px;
+  }
+
+  .team-card a {
+    font-size: 14px;
+    word-break: break-all;
+  }
+
+  .symptom-list {
+    padding-left: 1em;
+    font-size: 14px;
   }
 
   .timeline::before {
